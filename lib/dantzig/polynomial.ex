@@ -415,6 +415,9 @@ defmodule Dantzig.Polynomial do
       %__MODULE__{simplified: %{[] => constant} = simplified} when map_size(simplified) == 1 ->
         {:ok, constant}
 
+      %__MODULE__{simplified:  simplified} when map_size(simplified) == 0 ->
+        {:ok, 0}
+
       result ->
         free_variables = variables(result)
         {:error, {:free_variables, free_variables}}
