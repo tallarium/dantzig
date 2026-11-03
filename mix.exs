@@ -7,7 +7,7 @@ defmodule Dantzig.MixProject do
     [
       app: :dantzig,
       version: @version,
-      elixir: "~> 1.18.4",
+      elixir: "~> 1.20.4",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       compilers: Mix.compilers() ++ [:download_solver_binary],
